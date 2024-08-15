@@ -12,7 +12,13 @@ Copy the files or clone(git submodule) the repository inside your project direct
 ### Compiled Library Version
 1. Add `include` directory to the project/executable include directories
 1. Include `<spdlog/syslog_formatter.h>` in source files where needed
-1. Include `<spdlog/syslog_formatter-inl.h>` in `main.cpp`
+1. Add the following snippet in main source file(e.g., `main.cpp`) 
+```c++
+...
+#undef SPDLOG_SHARED_LIB
+#include <spdlog/syslog_formatter-inl.h>
+...
+```
 
 ## Example
 ```c++
