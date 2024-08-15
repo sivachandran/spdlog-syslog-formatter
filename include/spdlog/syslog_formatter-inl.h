@@ -45,25 +45,25 @@ SPDLOG_INLINE void syslog_formatter::format(const details::log_msg &msg, memory_
     details::severity::severity_enum severity;
 
     switch (msg.level) {
-        case level::trace:
-        case level::debug:
-            severity = details::severity::debug;
-            break;
-
-        case level::info:
-            severity = details::severity::informational;
-            break;
-
-        case level::warn:
-            severity = details::severity::warning;
+        case level::critical:
+            severity = details::severity::critical;
             break;
 
         case level::err:
             severity = details::severity::error;
             break;
 
-        case level::critical:
-            severity = details::severity::critical;
+        case level::warn:
+            severity = details::severity::warning;
+            break;
+
+        case level::info:
+            severity = details::severity::informational;
+            break;
+
+        default:
+            severity = details::severity::debug;
+            break;
     }
 
     dest.push_back('<');
