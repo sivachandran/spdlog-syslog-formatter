@@ -39,7 +39,7 @@ namespace facility {
     };
 }
 
-class SPDLOG_API syslog_formatter : public formatter {
+class syslog_formatter : public formatter {
 public:
     explicit syslog_formatter(int facility, std::string hostname, std::string appname);
 
