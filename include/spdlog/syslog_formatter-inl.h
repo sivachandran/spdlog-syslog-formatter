@@ -5,7 +5,6 @@
 #endif
 
 #include <spdlog/details/fmt_helper.h>
-#include <spdlog/pattern_formatter.h>
 
 namespace spdlog {
 namespace details {

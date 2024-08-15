@@ -2,6 +2,7 @@
 
 #include <spdlog/common.h>
 #include <spdlog/formatter.h>
+#include <spdlog/pattern_formatter.h>
 #include <spdlog/details/log_msg.h>
 
 #include <memory>

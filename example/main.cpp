@@ -1,6 +1,5 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/udp_sink.h>
-#include <spdlog/pattern_formatter.h>
 #include <spdlog/syslog_formatter.h>
 
 #ifndef SPDLOG_HEADER_ONLY
