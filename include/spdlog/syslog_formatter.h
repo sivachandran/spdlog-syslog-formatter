@@ -43,6 +43,9 @@ class syslog_formatter : public formatter {
 public:
     explicit syslog_formatter(int facility, std::string hostname, std::string appname);
 
+    syslog_formatter(const syslog_formatter &other) = delete;
+    syslog_formatter &operator=(const syslog_formatter &other) = delete;
+
     std::unique_ptr<formatter> clone() const override;
     void format(const details::log_msg &msg, memory_buf_t &dest) override;
 
